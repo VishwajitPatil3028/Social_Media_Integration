@@ -7,24 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class RrgisterActivity extends AppCompatActivity {
 
-    TextView createNewAccount;
+    TextView alreadyHaveAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rrgister);
 
-        createNewAccount = findViewById(R.id.createNewAccount);
+        alreadyHaveAccount = findViewById(R.id.alreadyHaveAccount);
 
 
-        createNewAccount.setOnClickListener(new View.OnClickListener() {
+        alreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,RrgisterActivity.class));
+                startActivity(new Intent( RrgisterActivity.this,MainActivity.class));
             }
         });
+
 
     }
 }
