@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SocialMediaIntegration">
         <activity
-            android:name=".RrgisterActivity"
+            android:name=".RegisterActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

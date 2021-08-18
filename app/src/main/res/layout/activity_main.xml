@@ -26,7 +26,7 @@
 
 
             <Button
-                android:id="@+id/btnRegister"
+                android:id="@+id/btnLogin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="72dp"
                 android:fontFamily="@font/amarante"
-                android:text="Register"
+                android:text="Log In"
                 android:textColor="@color/white"
                 android:textSize="44sp"
                 android:textStyle="bold"
@@ -136,13 +136,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="52dp"
-                android:text="Alrady have an Account"
+                android:text="Create New Account"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
-                app:layout_constraintStart_toStartOf="@+id/btnRegister"
-                app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+                app:layout_constraintStart_toStartOf="@+id/btnLogin"
+                app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -163,7 +163,7 @@
                 android:layout_marginStart="16dp"
                 android:background="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/textView4"
-                app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+                app:layout_constraintEnd_toEndOf="@+id/btnLogin"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView4"
                 app:layout_constraintTop_toTopOf="@+id/textView4" />
@@ -177,7 +177,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/textView4"
                 app:layout_constraintEnd_toStartOf="@+id/textView4"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/btnRegister"
+                app:layout_constraintStart_toStartOf="@+id/btnLogin"
                 app:layout_constraintTop_toTopOf="@+id/textView4" />
 
 
