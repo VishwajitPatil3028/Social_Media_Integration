@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
 
     FirebaseAuth mAuth;
-    FirebaseUser mUaser;
+    FirebaseUser mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
 
         mAuth = FirebaseAuth.getInstance();
-        mUaser = mAuth.getCurrentUser();
+        mUser = mAuth.getCurrentUser();
 
 
         alreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
         if(!email.matches(emailPattern))
         {
             inputEmail.setError("Enter Correct Email");
-            inputEmail.requestFocus();
+            //inputEmail.requestFocus();
         }else  if(password.isEmpty() || password.length() < 8)
         {
             inputPassword.setError("Enter Proper Password");
@@ -106,6 +106,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void sendUserToNextActivity() {
+        Intent intent = new Intent(RegisterActivity.this,HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
 
     }
 }

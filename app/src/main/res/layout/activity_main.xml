@@ -25,17 +25,20 @@
             android:layout_margin="30dp">
 
 
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/tvLogin"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/input_bg"
-                android:text="Login"
+                android:layout_marginTop="72dp"
+                android:fontFamily="@font/amarante"
+                android:text="Log In"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/forgotPassword"
-                app:layout_constraintStart_toStartOf="@+id/inputPassword"
-                app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+                android:textSize="44sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
 
@@ -84,41 +87,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
-            <ImageView
-                android:id="@+id/Google"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                app:srcCompat="@drawable/google_logo" />
-
-            <ImageView
-                android:id="@+id/Facebook"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                app:srcCompat="@drawable/facebook_logo" />
-
-            <TextView
-                android:id="@+id/tvLogin"
-                style="@style/Widget.AppCompat.TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="72dp"
-                android:fontFamily="@font/amarante"
-                android:text="Log In"
-                android:textColor="@color/white"
-                android:textSize="44sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
                 android:id="@+id/forgotPassword"
                 android:layout_width="wrap_content"
@@ -130,6 +98,18 @@
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="@+id/inputPassword"
                 app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_bg"
+                android:text="Login"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/forgotPassword"
+                app:layout_constraintStart_toStartOf="@+id/inputPassword"
+                app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
 
             <TextView
                 android:id="@+id/createNewAccount"
@@ -158,17 +138,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/createNewAccount" />
 
             <View
-                android:layout_width="0dp"
-                android:layout_height="3dp"
-                android:layout_marginStart="16dp"
-                android:background="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/textView4"
-                app:layout_constraintEnd_toEndOf="@+id/btnLogin"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/textView4"
-                app:layout_constraintTop_toTopOf="@+id/textView4" />
-
-            <View
                 android:id="@+id/view"
                 android:layout_width="0dp"
                 android:layout_height="3dp"
@@ -179,6 +148,37 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/btnLogin"
                 app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+            <ImageView
+                android:id="@+id/btnGoogle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:srcCompat="@drawable/google_logo" />
+
+            <ImageView
+                android:id="@+id/btnFacebook"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:srcCompat="@drawable/facebook_logo" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
