@@ -3,13 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2526041666666667" />
         <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/drawable/button_background.xml" value="0.2526041666666667" />
+        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/drawable/custom_button.xml" value="0.2526041666666667" />
+        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2526041666666667" />
+        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2526041666666667" />
+        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/drawable/input_bg.xml" value="0.2526041666666667" />
+        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/drawable/input_bg2.xml" value="0.2526041666666667" />
         <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/font/.xml" value="0.26666666666666666" />
         <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/layout/activity_facebook_log_in.xml" value="0.23645833333333333" />
         <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/layout/activity_google_sign_in.xml" value="0.23645833333333333" />
-        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/layout/activity_home.xml" value="0.23645833333333333" />
+        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/layout/activity_home.xml" value="0.176" />
         <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/layout/activity_main.xml" value="0.25925925925925924" />
-        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/layout/activity_register.xml" value="0.23645833333333333" />
+        <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/SPARKS/Social Media Integration/app/src/main/res/layout/activity_rrgister.xml" value="0.23645833333333333" />
       </map>
     </option>

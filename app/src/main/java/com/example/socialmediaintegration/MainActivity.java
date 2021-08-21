@@ -82,8 +82,9 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful())
                             {
+
                                 progressDialog.dismiss();
-                                //sendUserToNextActivity();
+                                sendUserToNextActivity();
                                 Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                             }else
                             {
@@ -117,10 +118,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-//    private void sendUserToNextActivity() {
-//        Intent intent = new Intent(MainActivity.this,HomeActivity.class);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-//        startActivity(intent);
-//
-//    }
+    private void sendUserToNextActivity() {
+        Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+
+    }
 }

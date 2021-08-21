@@ -148,14 +148,10 @@ public class GoogleSignInActivity extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_sign_in);
 
-
         nameGoogle = findViewById(R.id.nameGoogle);
         emailGoogle = findViewById(R.id.emailGoogle);
         logOutGoogle = findViewById(R.id.logOutGoogle);
         picGoogle = findViewById(R.id.picGoogle);
-
-
-
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Google Sign In..... ");
         progressDialog.show();
@@ -168,15 +164,10 @@ public class GoogleSignInActivity extends MainActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
-
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
-
-
-
-        // extra
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
         if(acct != null ){
@@ -192,17 +183,9 @@ public class GoogleSignInActivity extends MainActivity {
         logOutGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 signOut();
-
-//                Intent intent = new Intent(GoogleSignInActivity.this,HomeActivity.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-//                startActivity(intent);
             }
         });
-
-//        logOutGoogle.setOnClickListener();
-
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -246,19 +229,33 @@ public class GoogleSignInActivity extends MainActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             progressDialog.dismiss();
-                            // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
                         } else {
-                            // If sign in fails, display a message to the user.
                             progressDialog.dismiss();
                             Toast.makeText(GoogleSignInActivity.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
-//                            updateUI(null);
                             finish();
                         }
                     }
                 });
     }
+
+
+
+    private void signOut() {
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(GoogleSignInActivity.this,"Sign Out",Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                });
+    }
+
+}
+
+
+/*
 
 //    private void updateUI(FirebaseUser user) {
 //        Intent intent = new Intent(GoogleSignInActivity.this,HomeActivity.class);
@@ -266,15 +263,12 @@ public class GoogleSignInActivity extends MainActivity {
 //        startActivity(intent);
 //    }
 
-    private void signOut() {
-        mGoogleSignInClient.signOut()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(GoogleSignInActivity.this,"signout",Toast.LENGTH_SHORT).show();
-                        finish();
-                    }
-                });
-    }
 
-}
+
+//                Intent intent = new Intent(GoogleSignInActivity.this,HomeActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+//                startActivity(intent);
+
+
+
+ */
